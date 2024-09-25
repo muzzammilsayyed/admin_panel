@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <a href="{% url 'dashboard' %}">Dashboard</a>
+        <a href="{% url 'partner_list' %}">Partners</a>
+        <form action="{% url 'logout' %}" method="POST" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit" class="btn">Logout</button>
+        </form>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <h2>Welcome to the Admin Dashboard</h2>
+        </div>
+
+        <!-- Summary Card -->
+        <div class="summary-card">
+            <h3>Total Partners: {{ partners_count }}</h3>
+        </div>
+
+        <!-- Partners List -->
+        <div class="partners-list">
+            <h3>Partners</h3>
+            <ul>
+                {% for partner in partners %}
+                    <li>{{ partner.name }} - {{ partner.contact_info }}</li>
+                {% empty %}
+                    <li>No partners found.</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div>
+            <br>
+        <p><a href="{% url 'partner_list' %}" class="btn">View All Partners</a></p>
+        <br>
+        <br>
+        <p><a href="{% url 'add_partner' %}" class="btn">Add New Partner</a></p>
+        </div> 
+    </div>
+
+</body>
+</html>

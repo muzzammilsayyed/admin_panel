@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Partner</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="main-content">
+        <h2>Edit Partner: {{ partner.name }}</h2>
+        
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="button-group">
+                <button type="submit" class="btn">Save Changes</button>
+                <a href="{% url 'partner_list' %}" class="btn back-btn">Back to Partner List</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

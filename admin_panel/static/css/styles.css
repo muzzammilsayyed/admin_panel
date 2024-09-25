@@ -1,0 +1,375 @@
+/* General reset for all elements
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body style to ensure everything is centered */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login container */
+.login-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form inputs */
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+    border-color: #91c84f;
+    outline: none;
+}
+
+/* Submit button */
+form .btn {
+    width: 100%;
+    background-color: #91c84f;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form .btn:hover {
+    background-color: #78a942;
+}
+
+/* Link under form */
+.login-container p {
+    margin-top: 15px;
+    color: #333;
+}
+
+.login-container p a {
+    color: #91c84f;
+    text-decoration: none;
+}
+
+.login-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Reset styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;  /* Light background color for the entire page */
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    color: #91c84f;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    margin: 10px 0;
+    display: block;
+    font-size: 16px;
+}
+
+.sidebar a:hover {
+    background-color: #444;
+    padding-left: 10px;
+    transition: padding-left 0.2s;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;  /* Aligns with the sidebar */
+    padding: 20px;
+    flex: 1;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    color: #333;
+    font-size: 28px;
+}
+
+/* Summary Card */
+.summary-card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #91c84f;
+    border-radius: 8px;
+}
+
+.summary-card h3 {
+    margin: 0;
+    color: #333;
+    font-size: 22px;
+}
+
+/* Partners List */
+.partners-list {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.partners-list h3 {
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.partners-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.partners-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    color: #333;
+}
+
+.partners-list li:last-child {
+    border-bottom: none;
+}
+
+/* Button Styling */
+.btn {
+    background-color: #91c84f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+
+.btn:hover {
+    background-color: #7eb13e;
+}
+
+/* Login Page */
+.login-container {
+    background-color: white;  /* White background for the form */
+    padding: 20px;
+    border-radius: 8px;  /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    width: 300px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    color: #333;  /* Dark text color */
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;  /* Stack elements vertically */
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;  /* Padding inside the input fields */
+    margin-bottom: 15px;  /* Space between input fields */
+    border: 1px solid #ccc;  /* Light gray border */
+    border-radius: 4px;  /* Rounded corners for input fields */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #91c84f;  /* Change border color on focus */
+    outline: none;  /* Remove default outline */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 250px);
+    left: 250px;
+}
+
+/* Search Form */
+.search-form {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    width: 300px;
+    background-color: #91c84f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 1px;
+}
+
+.search-form button:hover {
+    background-color: #78a942;
+} 
+
+.partner-details {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.partner-details h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.partner-details p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.partner-details a {
+    color: #91c84f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.partner-details a:hover {
+    text-decoration: underline;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    justify-content: space-between;  /* Space out buttons evenly */
+    margin-top: 20px;  /* Space above the buttons */
+}
+
+/* Button Styling */
+.btn {
+    background-color: #91c84f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #7eb13e;
+}
+
+/* Back Button Specific Styling */
+.back-btn {
+    margin-left: 10px;  /* Optional: Space between buttons */
+}
+
+
+/* Partner List Styles */
+.partners-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.partners-list li {
+    display: flex;  /* Use flexbox for layout */
+    justify-content: space-between;  /* Space out the elements */
+    align-items: center;  /* Center vertically */
+    padding: 10px 0;  /* Space between items */
+    border-bottom: 1px solid #eee;  /* Optional: divider line */
+}
+
+.partner-info {
+    flex-grow: 1;  /* Allow the partner info to take up available space */
+}
+
+/* Edit Button Specific Styles */
+.edit-btn {
+    margin-left: 10px;  /* Optional: space between name and edit button */
+}
+

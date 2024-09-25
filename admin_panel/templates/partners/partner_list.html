@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Partner Listing</title>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <a href="{% url 'dashboard' %}">Dashboard</a>
+        <a href="{% url 'partner_list' %}">Partners</a>
+        <a href="{% url 'logout' %}">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header class="header">
+            <h2>Partner List</h2>
+        </header>
+        
+        <!-- Search form -->
+        <form method="GET" action="{% url 'partner_list' %}" class="search-form">
+            <input type="text" name="search" placeholder="Search partners..." value="{{ search_query|default:'' }}">
+            <button type="submit" class="btn">Search</button>
+        </form>
+
+        <!-- Partner list -->
+        <div class="partners-list">
+            <ul>
+                {% for partner in partners %}
+                    <li>
+                        <div class="partner-info">
+                            <a href="{% url 'partner_details' partner.pk %}">{{ partner.name }}</a> - {{ partner.contact_info }}
+                        </div>
+                        <a href="{% url 'edit_partner' partner.pk %}" class="btn edit-btn">Edit</a>
+                    </li>
+                {% empty %}
+                    <li>No partners found.</li>
+                {% endfor %}
+            </ul>
+            
+        </div>
+    </div>
+
+</body>
+</html>
