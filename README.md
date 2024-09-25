@@ -35,52 +35,61 @@ Follow these steps to set up and run the project on your local machine.
 
 Clone this repository to your local machine using the following command:
 
-```bash
+```
 git clone (https://github.com/muzzammilsayyed/admin_panel/)
 cd admin_panel
+```
 
 ### 2. Create a Virtual Environment
 Run the following commands:
 
-```bash
+```
 python -m venv venv
+```
 
 ###3. Activate the Virtual Environment
 Activate the virtual environment:
 
 For Windows:
-```bash
+```
 venv\Scripts\activate
+```
 
 For macOS/Linux:
-```bash
+```
 source venv/bin/activate
+```
 
 ### 4. Install Dependencies
 Install the required packages using requirements.txt:
-```bash
+```
 pip install -r requirements.txt
+```
 
 ### 5. Database Setup
 Run the following commands to apply migrations and create the database:
-```bash
+```
 python manage.py migrate
+```
 
 ### 6. Create a Superuser
 Create a superuser to log in to the admin panel:
-```bash
+```
 python manage.py createsuperuser
+```
 Follow the prompts to set up your admin credentials.
 
 ### 7. Run the Development Server
 Start the Django development server:
-```bash
+```
 python manage.py runserver
+```
 
 ### 8. Access the Application
 Open your web browser and go to:
-```bash
+```
 http://127.0.0.1:8000/login/
+```
 
 Log in using the superuser credentials you created.
 
