@@ -47,7 +47,7 @@ Run the following commands:
 python -m venv venv
 ```
 
-###3. Activate the Virtual Environment
+### 3. Activate the Virtual Environment
 Activate the virtual environment:
 
 For Windows:
