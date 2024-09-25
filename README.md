@@ -36,7 +36,7 @@ Follow these steps to set up and run the project on your local machine.
 Clone this repository to your local machine using the following command:
 
 ```
-git clone (https://github.com/muzzammilsayyed/admin_panel/)
+git clone (https://github.com/muzzammilsayyed/admin_panel.git)
 cd admin_panel
 ```
 
